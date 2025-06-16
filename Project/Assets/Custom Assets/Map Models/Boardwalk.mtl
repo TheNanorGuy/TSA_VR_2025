@@ -1,0 +1,36 @@
+newmtl Part1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0161167 0.0159 0.016555 
+
+d 1
+
+Ns 0
+
+map_Ka Part1_diff.png
+map_Kd Part1_diff.png
+map_d Part1_diff.png
+
+map_Bump Part1_nmap.png
+
+map_Ns Part1_spec.png
+
+newmtl BoardwalkMain1Mtl
+Material Color
+Ka 0.144972 0.0370285 0.000638183
+Kd 0.144972 0.0370285 0.000638183
+Ks 0.0108018 0.00275899 4.75509e-05 
+
+d 1
+
+Ns 0
+
+map_Ka BoardwalkMain1_diff.png
+map_Kd BoardwalkMain1_diff.png
+map_d BoardwalkMain1_diff.png
+
+map_Bump BoardwalkMain1_nmap.png
+
+map_Ns BoardwalkMain1_spec.png
+
