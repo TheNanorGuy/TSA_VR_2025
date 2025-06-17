@@ -19,7 +19,7 @@ public class BeginRingGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Ring button is alive");
+        Debug.Log("IT DONT EXIST" + (game == null));
         if (active && checkForHand()) { Debug.Log("Game On!"); game.gameCycle(); Destroy(this); }
     }
 
