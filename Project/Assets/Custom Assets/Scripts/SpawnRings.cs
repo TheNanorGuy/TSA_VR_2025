@@ -20,18 +20,21 @@ public class SpawnRings : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameStarted && !delay) { RunDelay(); Instantiate(ringPrefab, pos, rot); }
+        if (gameStarted && !delay) { Debug.Log("Spawning"); RunDelay(); Instantiate(ringPrefab, pos, rot); }
     }
 
     public IEnumerator gameCycle()
     {
         gameStarted = true;
+        Debug.Log("Game Started");
         yield return new WaitForSeconds(gameTime);
+        Debug.Log("Game Over");
         gameStarted = false;
     }
 
     IEnumerator RunDelay()
     {
+        Debug.Log("Wait");
         delay = true;
         yield return new WaitForSeconds(spawnDelay);
         delay = false;
