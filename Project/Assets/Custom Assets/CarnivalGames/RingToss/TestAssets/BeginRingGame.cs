@@ -6,21 +6,21 @@ public class BeginRingGame : MonoBehaviour
 {
     public GameObject handR, handL;
     public float range;
-    SpawnRings game;
+    ProjectileSpawner game;
     bool active = true;
     Vector3 pos;
     // Start is called before the first frame update
     void Start()
     {
         pos = gameObject.transform.position;
-        game = FindObjectOfType<SpawnRings>();
+        game = FindObjectOfType<ProjectileSpawner>();
     }
 
     // Update is called once per frame
     void Update()
     {
         Debug.Log("IT DONT EXIST" + (game == null));
-        if (active && checkForHand()) { Debug.Log("Game On!"); game.gameCycle(); Destroy(this); }
+        if (active && checkForHand()) { Debug.Log("Game On!"); game.gameCycle(); Debug.Log("Heckya!"); Destroy(this); }
     }
 
     bool checkForHand()

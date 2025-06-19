@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnRings : MonoBehaviour
+public class ProjectileSpawner : MonoBehaviour
 {
     public GameObject ringPrefab;
     public float gameTime, spawnDelay;
@@ -20,10 +20,15 @@ public class SpawnRings : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameStarted && !delay) { Debug.Log("Spawning"); RunDelay(); Instantiate(ringPrefab, pos, rot); }
+        if (gameStarted && !delay) { Debug.Log("Spawning"); StartCoroutine(RunDelay()); Instantiate(ringPrefab, pos, rot); }
     }
 
-    public IEnumerator gameCycle()
+    public void gameCycle()
+    {
+        StartCoroutine(game());
+    }
+
+    IEnumerator game()
     {
         gameStarted = true;
         Debug.Log("Game Started");
@@ -37,6 +42,7 @@ public class SpawnRings : MonoBehaviour
         Debug.Log("Wait");
         delay = true;
         yield return new WaitForSeconds(spawnDelay);
+        Debug.Log("Delay over");
         delay = false;
     }
 }
