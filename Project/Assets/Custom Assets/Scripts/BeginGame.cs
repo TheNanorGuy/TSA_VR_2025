@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BeginRingGame : MonoBehaviour
+public class BeginGame : MonoBehaviour
 {
     public GameObject handR, handL;
     public float range;
     ProjectileSpawner projGame;
+    ShooterHandler gunGame;
     bool active = true;
     public bool needsProjectiles;
     Vector3 pos;
@@ -15,6 +16,7 @@ public class BeginRingGame : MonoBehaviour
     {
         pos = gameObject.transform.position;
         projGame = FindObjectOfType<ProjectileSpawner>();
+        gunGame = FindObjectOfType<ShooterHandler>();
     }
 
     // Update is called once per frame
@@ -25,6 +27,7 @@ public class BeginRingGame : MonoBehaviour
         {
             Debug.Log("Game On!");
             if (needsProjectiles) { projGame.gameCycle(); Debug.Log("Heckya!"); Destroy(this); }
+            else { gunGame.startGame(); Destroy(this); }
         }
     }
 
