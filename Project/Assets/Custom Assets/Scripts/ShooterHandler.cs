@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ShooterHandler : MonoBehaviour
 {
+    [TextArea(2, 10)]
+    [SerializeField]
     public GameObject[] row1GamObj;
     public GameObject[] row2GamObj;
     public GameObject[] row3GamObj;
@@ -35,6 +37,7 @@ public class ShooterHandler : MonoBehaviour
         gameActive = true;
         StartCoroutine(targetCycle());
         yield return new WaitForSeconds(gameTime);
+        Debug.Log("Gungame over!");
         gameActive = false;
     }
 
@@ -51,10 +54,12 @@ public class ShooterHandler : MonoBehaviour
 
     void EstablishActiveTargets()
     {
-        for (int i = 0; i< 3; i++)
+        activeTargets = new ShootingTarget[2];
+        for (int i = 0; i < 2; i++)
         {
-            int randRow = Random.Range(0, targets.Length);
-            int randCol = Random.Range(0, targets[0].Length);
+            int randRow = Random.Range(0, targets.Length-1);
+            int randCol = Random.Range(0, targets[0].Length-1);
+            Debug.Log("Row: " + randRow + ", Col: " + randCol);
             activeTargets[i] = targets[randRow][randCol];
             Debug.Log(activeTargets[i].gameObject.name);
         }
@@ -75,8 +80,10 @@ public class ShooterHandler : MonoBehaviour
         row1 = toTargetList(row1GamObj);
         row2 = toTargetList(row2GamObj);
         targets = new ShootingTarget[][] { row1, row2 };
-
-        Debug.Log(targets);
+        /*targets[0] = row1;
+        targets[1] = row2;*/
+        //printTargets(targets[0]);
+        //Debug.Log(targets);
     }
 
     public bool gameOn()
@@ -92,5 +99,18 @@ public class ShooterHandler : MonoBehaviour
             newList[i] = list[i].GetComponent<ShootingTarget>();
         }
         return newList;
+    }
+
+    void printTargets(ShootingTarget[] list)
+    {
+        foreach (ShootingTarget o in list) { Debug.Log(o.gameObject.name); }
+    }
+
+    void printTargets(ShootingTarget[][] list)
+    {
+        foreach (ShootingTarget[] r in list)
+        {
+            foreach (ShootingTarget c in r) { Debug.Log(c.gameObject.name); }
+        }
     }
 }

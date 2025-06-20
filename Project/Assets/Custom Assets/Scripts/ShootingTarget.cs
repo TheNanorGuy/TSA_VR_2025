@@ -41,6 +41,6 @@ public class ShootingTarget : PointGet
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Projectile") { goDown(); displayPoints(); }
+        if (active && other.gameObject.tag == "Projectile") { goDown(); displayPoints(); }
     }
 }
