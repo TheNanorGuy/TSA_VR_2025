@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class ShooterHandler : MonoBehaviour
 {
-    public GameObject[] row1GamObj, row2GamObj, row3GamObj;
+    public GameObject[] row1GamObj;
+    public GameObject[] row2GamObj;
+    public GameObject[] row3GamObj;
     public float gameTime, cycleTime, tweenTime;
     bool gameActive;
-    ShootingTarget[,] targets;
+    ShootingTarget[] row1, row2, row3;
+    ShootingTarget[][] targets;
     ShootingTarget[] activeTargets;
     // Start is called before the first frame update
     void Start()
@@ -51,8 +54,9 @@ public class ShooterHandler : MonoBehaviour
         for (int i = 0; i< 3; i++)
         {
             int randRow = Random.Range(0, targets.Length);
-            int randCol = Random.Range(0, targets.GetLength(0));
-            activeTargets[i] = targets[randRow, randCol];
+            int randCol = Random.Range(0, targets[0].Length);
+            activeTargets[i] = targets[randRow][randCol];
+            Debug.Log(activeTargets[i].gameObject.name);
         }
 
         foreach (ShootingTarget t in activeTargets) { t.goUp(); }
@@ -68,27 +72,25 @@ public class ShooterHandler : MonoBehaviour
 
     void SetUpTargets()
     {
-        GameObject[] toUse = row1GamObj;
-        targets = new ShootingTarget[2,5];
-        for (int r = 0; r < targets.GetLength(0); r++)
-        {
-            switch(r)
-            {
-                case 0: toUse = row1GamObj; break;
-                case 1: toUse = row2GamObj; break;
-                case 2: toUse = row3GamObj; break;
-                default: toUse = row1GamObj; break;
-            }
+        row1 = toTargetList(row1GamObj);
+        row2 = toTargetList(row2GamObj);
+        targets = new ShootingTarget[][] { row1, row2 };
 
-            for (int c = 0; c < targets.GetLength(1); c++)
-            {
-                targets[r, c] = toUse[c].GetComponent<ShootingTarget>();
-            }
-        }
+        Debug.Log(targets);
     }
 
     public bool gameOn()
     {
         return gameActive;
+    }
+
+    ShootingTarget[] toTargetList(GameObject[] list)
+    {
+        ShootingTarget[] newList = new ShootingTarget[list.Length];
+        for (int i = 0; i < newList.Length; i++)
+        {
+            newList[i] = list[i].GetComponent<ShootingTarget>();
+        }
+        return newList;
     }
 }
