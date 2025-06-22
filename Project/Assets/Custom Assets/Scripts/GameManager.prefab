@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intro: {fileID: 0}
-  outro: {fileID: 0}
+  outro: {fileID: -2099527591191644876}
   needsProjectiles: 0
 --- !u!82 &-4365971480487720900
 AudioSource:
@@ -155,7 +155,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 66382bd64371ad24c95761f3d6690f90, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
