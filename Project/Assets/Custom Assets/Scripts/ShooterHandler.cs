@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ShooterHandler : MonoBehaviour
 {
-    [TextArea(2, 10)]
-    [SerializeField]
+    /*[TextArea(2, 10)]
+    [SerializeField]*/
     public GameObject[] row1GamObj;
     public GameObject[] row2GamObj;
     public GameObject[] row3GamObj;
