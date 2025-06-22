@@ -10,6 +10,7 @@ public class ShooterHandler : MonoBehaviour
     public GameObject[] row2GamObj;
     public GameObject[] row3GamObj;
     public float gameTime, cycleTime, tweenTime;
+    GameStart handler;
     bool gameActive;
     ShootingTarget[] row1, row2, row3;
     ShootingTarget[][] targets;
@@ -17,6 +18,7 @@ public class ShooterHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        handler = FindObjectOfType<GameStart>();
         gameActive = false;
         SetUpTargets();
     }
@@ -39,6 +41,7 @@ public class ShooterHandler : MonoBehaviour
         yield return new WaitForSeconds(gameTime);
         Debug.Log("Gungame over!");
         gameActive = false;
+        handler.endScene();
     }
 
     IEnumerator targetCycle()

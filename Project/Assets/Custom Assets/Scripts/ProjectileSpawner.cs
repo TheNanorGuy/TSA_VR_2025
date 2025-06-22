@@ -6,6 +6,7 @@ public class ProjectileSpawner : MonoBehaviour
 {
     public GameObject ringPrefab;
     public float gameTime, spawnDelay;
+    public GameStart handler;
     Vector3 pos;
     Quaternion rot;
     bool gameStarted;
@@ -13,6 +14,7 @@ public class ProjectileSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        handler = FindObjectOfType<GameStart>();
         pos = gameObject.transform.position;
         rot = gameObject.transform.rotation;
     }
@@ -35,6 +37,7 @@ public class ProjectileSpawner : MonoBehaviour
         yield return new WaitForSeconds(gameTime);
         Debug.Log("Game Over");
         gameStarted = false;
+        handler.endScene();
     }
 
     IEnumerator RunDelay()
