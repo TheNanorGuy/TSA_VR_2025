@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 153572964180438666}
   - component: {fileID: 7032877786323637543}
   - component: {fileID: 1665816709991874305}
+  - component: {fileID: 6307559751886239494}
   m_Layer: 0
   m_Name: Dart
   m_TagString: Untagged
@@ -133,10 +134,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6307559751886239494}
+        m_TargetAssemblyTypeName: DartScript, Assembly-CSharp
+        m_MethodName: grabbed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6307559751886239494}
+        m_TargetAssemblyTypeName: DartScript, Assembly-CSharp
+        m_MethodName: setRotation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -227,8 +252,21 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.04905054, y: 0.052765284, z: 0.1890996}
-  m_Center: {x: -0.00016946346, y: 0.0034477431, z: -0.06235016}
+  m_Size: {x: 0.04905054, y: 0.17175615, z: 0.16343902}
+  m_Center: {x: -0.00016946346, y: 0.043793544, z: -0.049519874}
+--- !u!114 &6307559751886239494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7674771966636782384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be70fb57c24b2e42aa3714d9098615f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 153572964180438666}
 --- !u!1001 &1948338407199330632
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -263,11 +301,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7021c095b0021d54fb38a69afa30d6a8, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.92387956
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7021c095b0021d54fb38a69afa30d6a8, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.000000021855694
+      value: 0.38268343
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7021c095b0021d54fb38a69afa30d6a8, type: 3}
       propertyPath: m_LocalRotation.y
@@ -275,11 +313,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7021c095b0021d54fb38a69afa30d6a8, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7021c095b0021d54fb38a69afa30d6a8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7021c095b0021d54fb38a69afa30d6a8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y

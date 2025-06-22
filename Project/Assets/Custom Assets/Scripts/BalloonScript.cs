@@ -30,6 +30,7 @@ public class BalloonScript : PointGet
     IEnumerator doEndLife()
     {
         source.Play();
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
         yield return new WaitForSeconds(source.clip.length);
         Destroy(gameObject);
     }
