@@ -4483,6 +4483,18 @@ PrefabInstance:
       propertyPath: handR
       value: 
       objectReference: {fileID: 1702128774}
+    - target: {fileID: 6020027766658163730, guid: 76e4340f783ca5043b9af9a786a81e85, type: 3}
+      propertyPath: handL
+      value: 
+      objectReference: {fileID: 2064934664}
+    - target: {fileID: 6020027766658163730, guid: 76e4340f783ca5043b9af9a786a81e85, type: 3}
+      propertyPath: handR
+      value: 
+      objectReference: {fileID: 1702128774}
+    - target: {fileID: 6020027766658163730, guid: 76e4340f783ca5043b9af9a786a81e85, type: 3}
+      propertyPath: nextScene
+      value: FerrisWheel
+      objectReference: {fileID: 0}
     - target: {fileID: 6097007243128394794, guid: 76e4340f783ca5043b9af9a786a81e85, type: 3}
       propertyPath: handL
       value: 
