@@ -84,6 +84,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: balloon
       objectReference: {fileID: 0}
+    - target: {fileID: 6317578925029434746, guid: 59187e939e6c62a4782e3fb33025d52d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b96ad9ddd88c5744ba4e9871bf1fa2a5, type: 2}
     - target: {fileID: 8632055958874330854, guid: 59187e939e6c62a4782e3fb33025d52d, type: 3}
       propertyPath: m_LocalScale.x
       value: 20

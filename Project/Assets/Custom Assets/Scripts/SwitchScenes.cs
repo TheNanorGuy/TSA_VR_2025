@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class SwitchScenes : MonoBehaviour
 {
     public string nextScene;
+    public GameObject handL, handR;
     bool active;
     // Start is called before the first frame update
     void Start()
@@ -16,7 +17,14 @@ public class SwitchScenes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (active && getHand()) switchScene();
+    }
+
+    bool getHand()
+    {
+        if (handL.transform.position == gameObject.transform.position) return true;
+        if (handR.transform.position == gameObject.transform.position) return true;
+        return false;
     }
 
     public void switchScene()

@@ -23,7 +23,7 @@ public class ShootingTarget : PointGet
     public void goUp()
     {
         animator.Play("GoUp");
-        light.intensity = 2;
+        //light.intensity = 2;
     }
 
     public void setActive()
@@ -34,7 +34,7 @@ public class ShootingTarget : PointGet
     public void goDown()
     {
         active = false; animator.Play("GoDown");
-        light.intensity = 0;
+        //light.intensity = 0;
     }
 
     public bool isUp()
