@@ -4533,6 +4533,10 @@ PrefabInstance:
       propertyPath: handR
       value: 
       objectReference: {fileID: 1702128774}
+    - target: {fileID: 733124484984280853, guid: 76e4340f783ca5043b9af9a786a81e85, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2089416547185985931, guid: 76e4340f783ca5043b9af9a786a81e85, type: 3}
       propertyPath: m_LocalPosition.x
       value: 27.4994
@@ -4641,6 +4645,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5022677830552223866, guid: 76e4340f783ca5043b9af9a786a81e85, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5131777063419571737, guid: 76e4340f783ca5043b9af9a786a81e85, type: 3}
       propertyPath: m_BlockingMask.m_Bits
       value: 0
@@ -4661,6 +4669,10 @@ PrefabInstance:
       propertyPath: handR
       value: 
       objectReference: {fileID: 1702128774}
+    - target: {fileID: 8463287123552294791, guid: 76e4340f783ca5043b9af9a786a81e85, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8852563953546775625, guid: 76e4340f783ca5043b9af9a786a81e85, type: 3}
       propertyPath: m_IsActive
       value: 1

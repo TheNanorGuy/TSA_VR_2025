@@ -789,6 +789,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8646153393463698222, guid: fc4b227e6354c1f4e9a41cc5956a73ef, type: 3}
+      propertyPath: ringPrefab
+      value: 
+      objectReference: {fileID: 7674771966636782384, guid: 311e8af778670924a961398cd7c0839f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1203,7 +1207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6581939549995044201, guid: 2df9abbf56181cd4d958dc29408a1516, type: 3}
       propertyPath: z
-      value: -4.5
+      value: -3.5106
       objectReference: {fileID: 0}
     - target: {fileID: 6581939549995044201, guid: 2df9abbf56181cd4d958dc29408a1516, type: 3}
       propertyPath: player

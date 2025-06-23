@@ -2550,6 +2550,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8646153393463698222, guid: fc4b227e6354c1f4e9a41cc5956a73ef, type: 3}
+      propertyPath: gameTime
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646153393463698222, guid: fc4b227e6354c1f4e9a41cc5956a73ef, type: 3}
+      propertyPath: spawnDelay
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
