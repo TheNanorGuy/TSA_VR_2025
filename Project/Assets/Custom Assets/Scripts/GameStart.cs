@@ -8,7 +8,7 @@ public class GameStart : MonoBehaviour
     public AudioSource intro;
     public AudioSource outro;
     public bool needsProjectiles;
-    string mapScene = "BasicScene";
+    string mapScene = "WhereTo";
     ProjectileSpawner projGame;
     ShooterHandler gunGame;
     // Start is called before the first frame update
