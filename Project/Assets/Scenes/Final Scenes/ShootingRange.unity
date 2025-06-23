@@ -2881,6 +2881,7 @@ Transform:
   - {fileID: 2144324048}
   - {fileID: 1499700852}
   - {fileID: 207556072}
+  - {fileID: 1409326709}
   - {fileID: 1640317175}
   - {fileID: 32595409}
   - {fileID: 817191135}
@@ -3719,6 +3720,88 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 062c39c74a8c0614eb7e6ceac1d0366d, type: 3}
+--- !u!1001 &1409326708
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1075519352}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: b9f240a733a3a3f40a05bd311d3bf146, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -124
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b9f240a733a3a3f40a05bd311d3bf146, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -173.26428
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b9f240a733a3a3f40a05bd311d3bf146, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 445
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b9f240a733a3a3f40a05bd311d3bf146, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b9f240a733a3a3f40a05bd311d3bf146, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b9f240a733a3a3f40a05bd311d3bf146, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b9f240a733a3a3f40a05bd311d3bf146, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b9f240a733a3a3f40a05bd311d3bf146, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b9f240a733a3a3f40a05bd311d3bf146, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b9f240a733a3a3f40a05bd311d3bf146, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4617729590477257162, guid: b9f240a733a3a3f40a05bd311d3bf146, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -189169162877300321, guid: b9f240a733a3a3f40a05bd311d3bf146, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b9f240a733a3a3f40a05bd311d3bf146, type: 3}
+      propertyPath: m_Name
+      value: Hotel (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b9f240a733a3a3f40a05bd311d3bf146, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3353666054418506819, guid: b9f240a733a3a3f40a05bd311d3bf146, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6018206261325011560, guid: b9f240a733a3a3f40a05bd311d3bf146, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b9f240a733a3a3f40a05bd311d3bf146, type: 3}
+--- !u!4 &1409326709 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b9f240a733a3a3f40a05bd311d3bf146, type: 3}
+  m_PrefabInstance: {fileID: 1409326708}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1440602189
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4030,6 +4113,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 6ac57b88babd8824e80e1fe6af38f996, type: 3}
       propertyPath: m_Name
       value: Roller Coaster
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6ac57b88babd8824e80e1fe6af38f996, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6ac57b88babd8824e80e1fe6af38f996, type: 3}
       propertyPath: m_StaticEditorFlags
