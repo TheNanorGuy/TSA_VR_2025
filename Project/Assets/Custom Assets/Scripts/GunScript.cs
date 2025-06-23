@@ -44,7 +44,7 @@ public class GunScript : MonoBehaviour
     {
         GameObject obj = Instantiate(ball, output.transform.position, output.transform.rotation);
         Rigidbody rb = obj.GetComponent<Rigidbody>();
-        rb.velocity += obj.transform.forward * 10;
+        rb.velocity += obj.transform.forward * 1/*(10 * obj.transform.localScale.magnitude)*/;
     }
 
     public void setIsHeld()

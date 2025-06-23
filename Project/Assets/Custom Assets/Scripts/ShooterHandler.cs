@@ -57,8 +57,8 @@ public class ShooterHandler : MonoBehaviour
 
     void EstablishActiveTargets()
     {
-        activeTargets = new ShootingTarget[2];
-        for (int i = 0; i < 2; i++)
+        activeTargets = new ShootingTarget[6];
+        for (int i = 0; i < 6; i++)
         {
             int randRow = Random.Range(0, targets.Length-1);
             int randCol = Random.Range(0, targets[0].Length-1);

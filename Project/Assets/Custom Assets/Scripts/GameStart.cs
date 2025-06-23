@@ -33,6 +33,7 @@ public class GameStart : MonoBehaviour
     void StartAGame()
     {
         if (needsProjectiles) projGame.gameCycle();
+        else gunGame.startGame();
     }
 
     IEnumerator WaitAMoment()
