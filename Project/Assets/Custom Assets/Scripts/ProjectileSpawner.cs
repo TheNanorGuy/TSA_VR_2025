@@ -5,6 +5,7 @@ using UnityEngine;
 public class ProjectileSpawner : MonoBehaviour
 {
     public GameObject ringPrefab;
+    public AudioSource appearSFX;
     public float gameTime, spawnDelay;
     public GameStart handler;
     Vector3 pos;
@@ -22,7 +23,7 @@ public class ProjectileSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameStarted && !delay) { Debug.Log("Spawning"); StartCoroutine(RunDelay()); Instantiate(ringPrefab, pos, rot); }
+        if (gameStarted && !delay) { Debug.Log("Spawning"); StartCoroutine(RunDelay()); Instantiate(ringPrefab, pos, rot); appearSFX.Play(); }
     }
 
     public void gameCycle()

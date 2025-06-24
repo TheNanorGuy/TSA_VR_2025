@@ -8,6 +8,7 @@ public class GunScript : MonoBehaviour
     public GameObject output;
     public GameObject ball;
     public ControllerData data;
+    public AudioSource source;
     public float delay;
     bool delayed = false;
     bool held;
@@ -42,6 +43,7 @@ public class GunScript : MonoBehaviour
 
     void shoot()
     {
+        source.Play();
         GameObject obj = Instantiate(ball, output.transform.position, output.transform.rotation);
         Rigidbody rb = obj.GetComponent<Rigidbody>();
         rb.velocity += obj.transform.forward * 1/*(10 * obj.transform.localScale.magnitude)*/;

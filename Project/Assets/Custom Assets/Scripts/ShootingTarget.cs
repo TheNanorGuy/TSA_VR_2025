@@ -6,7 +6,8 @@ using UnityEngine.Animations;
 public class ShootingTarget : PointGet
 {
     public Animator animator;
-    public Light light;
+    //public AudioSource hitSFX;
+    //public Light light;
     bool active = false;
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,7 @@ public class ShootingTarget : PointGet
 
     public void goDown()
     {
+        //hitSFX.Play();
         active = false; animator.Play("GoDown");
         //light.intensity = 0;
     }

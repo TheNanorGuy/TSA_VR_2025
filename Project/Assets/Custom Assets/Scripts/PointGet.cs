@@ -8,6 +8,7 @@ public class PointGet : MonoBehaviour
     public float xAdj, yAdj, zAdj;
     public float rotFix;
     public int pointAmount;
+    public AudioSource pointSFX;
     public GameObject pointPrefab;
     Quaternion rot;
     Quaternion newRot;
@@ -25,7 +26,8 @@ public class PointGet : MonoBehaviour
     }
 
     public void displayPoints() {
-        GameObject ui = Instantiate(pointPrefab, gameObject.transform.position + new Vector3(xAdj, yAdj, zAdj), newRot);
-        ui.GetComponentInChildren<Text>().text = "" + pointAmount;
+        pointSFX.Play();
+        /*GameObject ui = Instantiate(pointPrefab, gameObject.transform.position + new Vector3(xAdj, yAdj, zAdj), newRot);
+        ui.GetComponentInChildren<Text>().text = "" + pointAmount;*/
     }
 }
