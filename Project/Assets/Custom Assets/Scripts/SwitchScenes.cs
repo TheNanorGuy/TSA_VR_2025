@@ -14,14 +14,14 @@ public class SwitchScenes : MonoBehaviour
     void Start()
     {
         active = true;
-        range = 0.0005f;
+        range = 0.001f;
         pos = gameObject.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (active && getHand()) switchScene();
+        //if (active && getHand()) switchScene();
     }
 
     bool getHand()
@@ -34,5 +34,13 @@ public class SwitchScenes : MonoBehaviour
     public void switchScene()
     {
         if (active) { active = false; SceneManager.LoadScene(nextScene); }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Hand")
+        {
+            switchScene();
+        }
     }
 }
