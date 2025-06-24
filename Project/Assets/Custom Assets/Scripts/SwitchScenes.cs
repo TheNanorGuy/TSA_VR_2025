@@ -38,6 +38,7 @@ public class SwitchScenes : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Collided");
         if (other.gameObject.tag == "Hand")
         {
             switchScene();
